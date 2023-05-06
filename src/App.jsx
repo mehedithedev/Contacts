@@ -3,6 +3,17 @@ import Card from "./Components/Card";
 import contacts from "./contacts"
 import Avatar from "./Components/Avatar";
 
+
+const CreateCard=(contact)=>{
+    return <Card 
+    name={contact.name}
+    img={contact.imgURL}
+    email={contact.email}
+    phone={contact.phone}
+
+    />
+}
+
 const App=()=>{
     return(
         <div>
@@ -10,25 +21,8 @@ const App=()=>{
            <Avatar
             img='https://pbs.twimg.com/profile_images/1623719111950729218/Hg6XiSyJ_400x400.jpg'
            />
-           <Card 
-           name=    {contacts[0].name} 
-           img=     {contacts[0].imgURL}
-           email=   {contacts[0].email}
-           phone=   {contacts[0].phone}
-            />
-           <Card
-            name=   {contacts[1].name}
-            img=    {contacts[1].imgURL}
-            email=  {contacts[1].email}
-            phone=  {contacts[1].phone}
-
-           />
-           <Card
-            name=   {contacts[2].name}
-            img=    {contacts[2].imgURL}
-            email=  {contacts[2].email}
-            phone=  {contacts[2].phone}
-           />
+           {contacts.map(CreateCard)}
+        
         </div>
     )
 }
