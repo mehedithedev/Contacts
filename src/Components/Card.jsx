@@ -1,3 +1,5 @@
+import Avatar from "./Avatar"
+
 const Card= (props)=>{
     return(
         
@@ -8,11 +10,8 @@ const Card= (props)=>{
                 
                 <h2 className="name">{props.name}</h2>
                 
-                <img className="circle-img" 
-                src={props.img}
-                alt="Doramenon.png"
-
-                />
+                <Avatar img={props.img}/>
+                
             </div>
             <div className="bottom">
                 <p className="info">{props.email}</p>
