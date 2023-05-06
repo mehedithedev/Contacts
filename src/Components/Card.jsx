@@ -1,4 +1,5 @@
 import Avatar from "./Avatar"
+import Info from "./Info"
 
 const Card= (props)=>{
     return(
@@ -14,8 +15,12 @@ const Card= (props)=>{
                 
             </div>
             <div className="bottom">
-                <p className="info">{props.email}</p>
-                <p className="info">{props.phone}</p>
+                <Info
+                detailInfo={props.email}
+                />
+                <Info
+                detailInfo={props.phone}
+                />
             </div>
         </div>
 
