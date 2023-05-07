@@ -6,11 +6,12 @@ import Avatar from "./Components/Avatar";
 
 const CreateCard=(contact)=>{
     return <Card 
+    id={contact.id}
+    key={contact.id}
     name={contact.name}
     img={contact.imgURL}
     email={contact.email}
     phone={contact.phone}
-
     />
 }
 
